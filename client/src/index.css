@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  width: 100vw;
+
+  overflow-x: hidden;
+}
+
+.navbar {
+  width: 100vw;
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  background-color: #000;
+  color: #fff;
+  border-bottom: 1px solid #000;
+}
+
+.navbar ul {
+  list-style: none;
+
+  display: flex;
+  gap: 10px;
+}
+
+.navbar ul li {
+  padding: 0 10px;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.chapters_container {
+  padding: 20px;
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.chapters_container .chapter_name {
+  padding: 10px;
+
+  color: #222;
+  background-color: #eee;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.chapters_container .chapter_name.active {
+  color: #fff;
+  background-color: #000;
+}
+
+.header {
+  width: 100%;
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+/* 
+  border: 1px solid #000; */
+}
+
+.header h1 {
+  text-align: center;
+}
+
+button {
+  padding: 10px;
+
+  background-color: #000;
+  color: #fff;
+  font-weight: 700;
+
+  border: none;
+  outline: none;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.objectives_container {
+  width: 100%;
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+/* 
+  border: 1px solid #000; */
+}
+
+.objective {
+  padding: 10px;
+
+  color: #222;
+  background-color: #eee;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.objective.active {
+  color: #fff;
+  background-color: #006e9e;
+}
+
+.current_objective {
+  padding: 20px;
+  width: 100%;
+/* 
+  border: 1px solid #000; */
+}
+
+.current_objective strong {
+  font-size: 17px;
+  text-align: center;
+}
+
+.roles_container {
+  padding: 10px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+/* 
+  border: 1px solid #000; */
+}
+
+.role_container, .roles_header {
+  padding: 10px;
+  width: 100%;
+  height: 40px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr auto;
+  gap: 10px;
+/* 
+  border: 1px solid #000; */
+}
+
+.upload_btn, .update_role {
+  margin: 20px 20px 20px auto;
+  padding: 10px 20px;
+
+  color: #fff;
+  background-color: #0f0;
+
+  border: none;
+  outline: none;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.update_role {
+  margin: 0;
+}
+
+.inactive_update_rote {
+  padding: 10px 20px;
+
+  color: #aaa;
+  background-color: #eee;
+
+  border: none;
+  outline: none;
+  border-radius: 5px;
+
+  pointer-events: none;
+}
+
+.role_container span {
+  padding: 10px;
+
+  border: 1px solid #777;
+  border-radius: 2px;
+}
+
+select {
+  padding: 10px;
+}
+
+textarea {
+  padding: 10px;
+  resize: none;
+}
+
+.statistics_container {
+  margin-top: 20px;
+  width: 100vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.statistics_container .charts {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.history_btns_container {
+  margin-top: 10px;
+  width: 100%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.history_btns_container button {
+  background-color: #ff1616;
+}
