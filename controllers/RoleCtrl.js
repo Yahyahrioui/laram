@@ -32,8 +32,6 @@ const RoleCtrl = {
         try {
             const { id, confirm, maitrise, justify } = req.body
     
-            console.log({ id, confirm, maitrise, justify });
-    
             const data = await Role.findByIdAndUpdate(
               { _id: id },
               {

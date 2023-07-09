@@ -1,5 +1,6 @@
 require('dotenv').config()
 const express = require('express');
+const path = require('path');
 const connection = require('./connection/connection') 
 const bodyParser = require('body-parser');
 const app = express()
@@ -11,10 +12,6 @@ connection()
 
 app.use('/api/role', require('./routes/RoleRoutes'))
 app.use('/api/history', require('./routes/HistoryRoutes'))
-
-app.get('/', (req, res) => {
-    return res.status(200).json({ success: true, data: 'Home' })
-})
 
 app.use(express.static(path.join(__dirname, "./client/build")))
 app.get("*", function (req, res){
