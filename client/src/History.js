@@ -13,7 +13,7 @@ function History() {
 
   const getRoles = async () => {
     try {
-      const res = await axios.get("/history");
+      const res = await axios.get("/api/history");
       setData(res.data.data);
       setRoles(res.data.data[0].history[0].Roles);
       setHistoryId(res.data.data[0]._id)
@@ -25,9 +25,9 @@ function History() {
   const deleteHistory = async (id) => {
     try {
       if(window.confirm('Are you sure you want to delete this history?')) {
-        const res = await axios.delete(`/history/${id}`);
+        const res = await axios.delete(`/api/history/${id}`);
         if(res) alert('Deleted successfuly!')
-        window.location.reload = true
+        window.location.href = '/history'
       }
     }
     catch (err) {

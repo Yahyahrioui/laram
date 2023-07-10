@@ -26,12 +26,11 @@ function Statistics() {
     const get_roles = async () => {
         try {
             let confirm_array = []
-            const res = await axios.get("/role");
+            const res = await axios.get("/api/role");
             for (let i = 0; i < res.data.data.length; i++) {
                 confirm_array.push(res.data.data[i].maitrise);
             }
             setRoles(res.data.data)
-            console.log(res.data.data)
 
             let elementCounts = {
                 Maitrsé: 0,

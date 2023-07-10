@@ -75,7 +75,7 @@ function Role({ role, Chapter, ObjectiveCounter, Roles }) {
 
     const updateRole = async (e, id) => {
       try {
-        await axios.put('/role', 
+        await axios.put('/api/role', 
         { 
           id: id, 
           confirm: Confirm,
@@ -90,7 +90,7 @@ function Role({ role, Chapter, ObjectiveCounter, Roles }) {
       }
     }
 
-    if (Roles.length === 0) return <h1>Loading...</h1>;
+    if (Roles?.length === 0) return <h1>Loading...</h1>;
 
     return (
       <div className="role_container">

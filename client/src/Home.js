@@ -8,13 +8,9 @@ function Home() {
   const [ObjectiveCounter, setObjectiveCounter] = useState(0);
   const [Roles, setRoles] = useState([]);
 
-  useEffect(() => {
-    getRoles();
-  }, []);
-
   const getRoles = async () => {
     try {
-      const res = await axios.get("/role");
+      const res = await axios.get("/api/role");
       setRoles(res.data.data);
     } catch (err) {
       console.log(err.message);
@@ -28,7 +24,7 @@ function Home() {
 
   const handleRegister = async () => {
     try {
-      const res = await axios.post("/history", {
+      const res = await axios.post("/api/history", {
         Roles,
       });
 
@@ -37,6 +33,10 @@ function Home() {
       console.log("error");
     }
   };
+
+  useEffect(() => {
+    getRoles();
+  }, []);
 
   return (
     <div className="container">
